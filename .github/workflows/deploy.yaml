@@ -42,4 +42,5 @@ jobs:
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
             --platform managed \
             --region $REGION \
-            --allow-unauthenticated
+            --allow-unauthenticated \
+            --build-service-account projects/gcp-5ann01-sbx-devopspoc/serviceAccounts/github-actions-test@gcp-5ann01-sbx-devopspoc.iam.gserviceaccount.com
