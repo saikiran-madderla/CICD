@@ -43,4 +43,4 @@ jobs:
             --platform managed \
             --region $REGION \
             --allow-unauthenticated \
-            --service-account=github-actions-test@gcp-5ann01-sbx-devopspoc.iam.gserviceaccount.com
+            
