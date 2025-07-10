@@ -41,6 +41,7 @@ jobs:
            gcloud run deploy hello-app \
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
             --platform managed \
+            --source . \
             --service-account ${{ env.SERVICE_ACCOUNT_EMAIL }} \
             --logs-bucket gs://gcp-5ann01-sbx-devopspoc_cloudbuild \
             --region $REGION \
