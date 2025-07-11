@@ -39,7 +39,7 @@ jobs:
         run: |
            gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
            gcloud run deploy hello-app \
-            --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
+            --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
             --platform managed \
             --service-account ${{ env.SERVICE_ACCOUNT_EMAIL }} \
             --logs-bucket gs://gcp-5ann01-sbx-devopspoc_cloudbuild \
