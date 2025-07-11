@@ -34,15 +34,15 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: ${{ env.PROJECT_ID }}
-
+      
       - name: Build and Deploy to Cloud Run
         run: |
-           gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
-           gcloud run deploy hello-app \
-            --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
-            --platform managed \
+          gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
             --service-account ${{ env.SERVICE_ACCOUNT_EMAIL }} \
-            --logs-bucket gs://gcp-5ann01-sbx-devopspoc_cloudbuild \
+            --logging CLOUD_LOGGING_ONLY
+          gcloud run deploy hello-app \
+            --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
+            --platform managed \
             --region $REGION \
             --allow-unauthenticated  
             
