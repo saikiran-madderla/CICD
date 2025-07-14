@@ -45,6 +45,6 @@ jobs:
             --platform managed \
             --region $REGION \
             --allow-unauthenticated
-            --ingress internal-and-cloud-load-balancing
+            
             
             
