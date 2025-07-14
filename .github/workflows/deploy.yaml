@@ -44,6 +44,7 @@ jobs:
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO/hello-app \
             --platform managed \
             --region $REGION \
-            --allow-unauthenticated 
+            --allow-unauthenticated
+            --ingress internal-and-cloud-load-balancing
             
             
