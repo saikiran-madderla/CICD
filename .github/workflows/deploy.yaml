@@ -45,6 +45,8 @@ jobs:
             --platform managed \
             --region $REGION \
             --allow-unauthenticated
+            --gen2
+            --ingress internal-and-cloud-load-balancing
             
             
             
